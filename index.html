@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Ridita Mozumder Maria | Personal Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet" />
+  <style>
+    :root { --ink:#1e1b3a; --paper:#fbf8ff; --violet:#5b3fd9; --mint:#2ec4a6; --sun:#ffc145; --soft:#efe9ff; }
+    html, body { overflow-x: hidden; }
+    body { font-family: 'DM Sans', system-ui, sans-serif; background: var(--paper); color: var(--ink); line-height: 1.65; }
+    h1, h2, h3, .brand { font-family: 'Bricolage Grotesque', 'DM Sans', sans-serif; line-height: 1.1; }
+    section { scroll-margin-top: 72px; }
+    .btn { display:inline-block; padding:.75rem 1.5rem; border-radius:.75rem; font-weight:700; transition: transform .15s, background .15s; }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-primary { background: var(--violet); color:#fff; }
+    .btn-primary:hover { background:#4a30bd; }
+    .btn-ghost { border:2px solid var(--ink); }
+    .btn-ghost:hover { background: var(--ink); color:#fff; }
+    .card { background:#fff; border:2px solid var(--ink); border-radius:1rem; box-shadow:6px 6px 0 var(--ink); }
+    a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline:3px solid var(--sun); outline-offset:2px; }
+    .badge { display:inline-flex; align-items:center; gap:.4rem; padding:.4rem .9rem; border-radius:999px; background:var(--soft); font-weight:500; border:1.5px solid var(--violet); }
+    .timeline { border-left:3px solid var(--violet); }
+    .timeline::before { content:""; position:absolute; left:-9px; top:.4rem; width:15px; height:15px; border-radius:50%; background:var(--sun); border:3px solid var(--ink); }
+    @media (prefers-reduced-motion: reduce) { * { transition:none !important; scroll-behavior:auto !important; } }
+  </style>
+</head>
+<body>
+
+  <!-- 1. NAVBAR -->
+  <header class="sticky top-0 z-50 bg-[#fbf8ff]/95 backdrop-blur border-b-2 border-[#1e1b3a]">
+    <nav class="max-w-6xl mx-auto px-5 py-3 flex items-center justify-between">
+      <a href="#home" class="brand text-2xl font-extrabold">Ridita<span style="color:var(--violet)">Maria</span></a>
+      <ul class="hidden md:flex gap-8 font-medium">
+        <li><a class="hover:text-[#5b3fd9]" href="#home">Home</a></li>
+        <li><a class="hover:text-[#5b3fd9]" href="#about">About</a></li>
+        <li><a class="hover:text-[#5b3fd9]" href="#skills">Skills</a></li>
+        <li><a class="hover:text-[#5b3fd9]" href="#projects">Projects</a></li>
+        <li><a class="hover:text-[#5b3fd9]" href="#contact">Contact</a></li>
+      </ul>
+      <button id="menuBtn" class="md:hidden p-2 border-2 border-[#1e1b3a] rounded-lg" aria-label="Toggle menu" aria-expanded="false">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </nav>
+    <ul id="mobileMenu" class="hidden md:hidden px-5 pb-4 font-medium flex-col gap-1">
+      <li><a class="block py-2" href="#home">Home</a></li>
+      <li><a class="block py-2" href="#about">About</a></li>
+      <li><a class="block py-2" href="#skills">Skills</a></li>
+      <li><a class="block py-2" href="#projects">Projects</a></li>
+      <li><a class="block py-2" href="#contact">Contact</a></li>
+    </ul>
+  </header>
+
+  <main>
+    <!-- 2. HERO -->
+    <section id="home" class="max-w-6xl mx-auto px-5 py-16 md:py-24 grid md:grid-cols-2 gap-12 items-center">
+      <div class="order-2 md:order-1">
+        <p class="badge mb-5">Open to freelance work</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold">Hi, I'm Ridita Mozumder Maria. I build websites that work on every screen.</h1>
+        <p class="mt-5 text-lg max-w-prose">Front-End Developer and CSE student. I turn ideas into clean, responsive web pages, and I'm building my career as a freelancer.</p>
+        <div class="mt-8 flex flex-wrap gap-4">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-ghost">Contact Me</a>
+        </div>
+      </div>
+      <div class="order-1 md:order-2 flex justify-center">
+        <!-- Replace images/profile.jpg with your own photo -->
+        <img src="images/profile.jpg" alt="Profile picture of Ridita Mozumder Maria"
+             onerror="this.onerror=null;this.src='data:image/svg+xml;utf8,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 200 200%22%3E%3Crect width=%22200%22 height=%22200%22 fill=%22%23efe9ff%22/%3E%3Ccircle cx=%22100%22 cy=%2275%22 r=%2740%22 fill=%22%235b3fd9%22/%3E%3Cellipse cx=%22100%22 cy=%22185%22 rx=%2270%22 ry=%2255%22 fill=%22%235b3fd9%22/%3E%3C/svg%3E'"
+             class="w-64 h-64 sm:w-80 sm:h-80 max-w-full object-cover rounded-[2rem] border-2 border-[#1e1b3a]" style="box-shadow:10px 10px 0 var(--sun)" />
+      </div>
+    </section>
+
+    <!-- 3. ABOUT -->
+    <section id="about" class="bg-[#efe9ff] border-y-2 border-[#1e1b3a]">
+      <div class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-5 gap-10">
+        <h2 class="text-3xl sm:text-4xl font-extrabold md:col-span-2">About me</h2>
+        <div class="md:col-span-3 space-y-4 text-lg">
+          <p>I'm a second-year Computer Science and Engineering student at United International University (UIU), Bangladesh. I enjoy making things that people can see and use, and web development is where I started.</p>
+          <p>Right now I'm learning HTML, CSS, Tailwind CSS and JavaScript, and practicing by building small projects.</p>
+          <p><strong>Career goal:</strong> to work as a freelance web developer, choosing my own projects and working on my own schedule. Outside of code, I like learning new tools and improving my designs.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. SKILLS -->
+    <section id="skills" class="max-w-6xl mx-auto px-5 py-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Skills</h2>
+      <p class="mt-3 max-w-prose">Tools I use to build and ship my projects.</p>
+      <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="card p-6"><h3 class="text-xl font-bold">Front-end</h3>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="badge">HTML</span><span class="badge">CSS</span><span class="badge">Tailwind CSS</span><span class="badge">JavaScript</span></div></div>
+        <div class="card p-6"><h3 class="text-xl font-bold">Tools</h3>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="badge">Git</span><span class="badge">GitHub</span><span class="badge">VS Code</span></div></div>
+        <div class="card p-6"><h3 class="text-xl font-bold">Also learning</h3>
+          <div class="mt-4 flex flex-wrap gap-2"><span class="badge">Responsive design</span><span class="badge">C / C++</span><span class="badge">Problem solving</span></div></div>
+      </div>
+    </section>
+
+    <!-- 5. PROJECTS -->
+    <section id="projects" class="bg-[#efe9ff] border-y-2 border-[#1e1b3a]">
+      <div class="max-w-6xl mx-auto px-5 py-16">
+        <h2 class="text-3xl sm:text-4xl font-extrabold">Projects</h2>
+        <div class="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+          <article class="card overflow-hidden flex flex-col">
+            <div class="h-40 flex items-center justify-center text-white text-2xl font-bold brand" style="background:linear-gradient(135deg,#5b3fd9,#2ec4a6)">Landing Page</div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-bold">Product Landing Page</h3>
+              <p class="mt-2 flex-1">A responsive landing page with a hero, feature cards and a call-to-action, built with Tailwind CSS.</p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a href="#" class="btn btn-primary !py-2 !px-4">Live Demo</a>
+                <a href="#" class="btn btn-ghost !py-2 !px-4">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden flex flex-col">
+            <div class="h-40 flex items-center justify-center text-[#1e1b3a] text-2xl font-bold brand" style="background:linear-gradient(135deg,#ffc145,#ff8fab)">To-Do App</div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-bold">To-Do List App</h3>
+              <p class="mt-2 flex-1">A simple task manager where you can add, complete and delete tasks, written in vanilla JavaScript.</p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a href="#" class="btn btn-primary !py-2 !px-4">Live Demo</a>
+                <a href="#" class="btn btn-ghost !py-2 !px-4">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+          <article class="card overflow-hidden flex flex-col md:col-span-2 lg:col-span-1">
+            <div class="h-40 flex items-center justify-center text-white text-2xl font-bold brand" style="background:linear-gradient(135deg,#1e1b3a,#5b3fd9)">Blog Layout</div>
+            <div class="p-6 flex flex-col flex-1">
+              <h3 class="text-xl font-bold">Responsive Blog Layout</h3>
+              <p class="mt-2 flex-1">A clean blog homepage that adapts from one column on phones to a grid on desktops.</p>
+              <div class="mt-5 flex flex-wrap gap-3">
+                <a href="#" class="btn btn-primary !py-2 !px-4">Live Demo</a>
+                <a href="#" class="btn btn-ghost !py-2 !px-4">Source Code</a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 6. EDUCATION -->
+    <section id="education" class="max-w-6xl mx-auto px-5 py-16">
+      <h2 class="text-3xl sm:text-4xl font-extrabold">Education</h2>
+      <div class="mt-10 max-w-2xl">
+        <div class="timeline relative pl-8 pb-10">
+          <h3 class="text-xl font-bold">B.Sc. in Computer Science and Engineering</h3>
+          <p class="font-medium text-[#5b3fd9]">United International University (UIU), Bangladesh</p>
+          <p class="mt-1">Currently in my second year, studying programming, data structures and web development.</p>
+        </div>
+        <div class="timeline relative pl-8">
+          <h3 class="text-xl font-bold">Self-paced web development course</h3>
+          <p class="font-medium text-[#5b3fd9]">Online learning</p>
+          <p class="mt-1">Learning HTML, CSS, Tailwind CSS and JavaScript through assignments and projects.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT -->
+    <section id="contact" class="bg-[#efe9ff] border-y-2 border-[#1e1b3a]">
+      <div class="max-w-6xl mx-auto px-5 py-16 grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-3xl sm:text-4xl font-extrabold">Let's work together</h2>
+          <p class="mt-4 text-lg max-w-prose">Have a project in mind? Send me a message and I'll reply as soon as I can.</p>
+          <p class="mt-6"><strong>Email:</strong> <a class="underline break-all" href="mailto:riditamozumder@gmail.com">riditamozumder@gmail.com</a></p>
+          <div class="mt-5 flex flex-wrap gap-3">
+            <a href="https://github.com/Ridita26" target="_blank" rel="noopener" class="btn btn-ghost !py-2 !px-4">GitHub</a>
+          </div>
+        </div>
+        <form class="card p-6 space-y-4" onsubmit="event.preventDefault(); this.reset(); document.getElementById('sent').classList.remove('hidden');">
+          <div><label for="name" class="block font-bold mb-1">Name</label>
+            <input id="name" type="text" required placeholder="Your name" class="w-full border-2 border-[#1e1b3a] rounded-lg px-4 py-2" /></div>
+          <div><label for="email" class="block font-bold mb-1">Email</label>
+            <input id="email" type="email" required placeholder="you@example.com" class="w-full border-2 border-[#1e1b3a] rounded-lg px-4 py-2" /></div>
+          <div><label for="message" class="block font-bold mb-1">Message</label>
+            <textarea id="message" rows="4" required placeholder="Tell me about your project" class="w-full border-2 border-[#1e1b3a] rounded-lg px-4 py-2"></textarea></div>
+          <button type="submit" class="btn btn-primary w-full">Send message</button>
+          <p id="sent" class="hidden font-medium text-[#1a8f78]">Message sent. Thank you!</p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- 8. FOOTER -->
+  <footer class="bg-[#1e1b3a] text-white">
+    <div class="max-w-6xl mx-auto px-5 py-10 flex flex-col md:flex-row gap-6 md:items-center md:justify-between">
+      <div>
+        <p class="brand text-2xl font-extrabold">RiditaMaria</p>
+        <p class="text-sm opacity-80 mt-1">&copy; 2026 Ridita Mozumder Maria. All rights reserved.</p>
+      </div>
+      <ul class="flex flex-wrap gap-x-6 gap-y-2">
+        <li><a class="hover:underline" href="#home">Home</a></li>
+        <li><a class="hover:underline" href="#projects">Projects</a></li>
+        <li><a class="hover:underline" href="https://github.com/Ridita26" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
+    </div>
+  </footer>
+
+  <script>
+    const btn = document.getElementById('menuBtn');
+    const menu = document.getElementById('mobileMenu');
+    btn.addEventListener('click', () => {
+      const open = menu.classList.toggle('hidden') === false;
+      menu.classList.toggle('flex', open);
+      btn.setAttribute('aria-expanded', open);
+    });
+    menu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      menu.classList.add('hidden'); menu.classList.remove('flex'); btn.setAttribute('aria-expanded', false);
+    }));
+  </script>
+</body>
+</html>
